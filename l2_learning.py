@@ -81,6 +81,16 @@ class LearningSwitch (object):
     # Our table
     self.macToPort = {}
 
+# Our firewall table
+    self.firewall = {}
+
+    # Add a Couple of Rules
+    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:01'))
+    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
+    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:03'))	
+    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:04'))
+    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:05'))
+    self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:05'))	
     # We want to hear PacketIn messages, so we listen
     # to the connection
     connection.addListeners(self)
