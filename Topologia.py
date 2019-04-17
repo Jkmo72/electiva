@@ -6,11 +6,11 @@ class MyTopo( Topo ):
         # Initialize topology
         Topo.__init__( self )
         # Add hosts and switches
-        Host1 = net.addHost( 'h1', ip='10.0.0.1', mac='00:00:00:00:00:01' )
-        Host2 = net.addHost( 'h2', ip='10.0.0.2', mac='00:00:00:00:00:02' )
-        Host3 = net.addHost( 'h3', ip='10.0.0.3', mac='00:00:00:00:00:03' )
-        Host4 = net.addHost( 'h4', ip='10.0.0.4', mac='00:00:00:00:00:04')
-	ServerWeb = net.addHost( 'SrvWeb', ip='10.0.0.5', mac='00:00:00:00:00:05' )	
+        Host1 = self.addHost( 'h1' )
+        Host2 = self.addHost( 'h2' )
+        Host3 = self.addHost( 'h3' )
+        Host4 = self.addHost( 'h4' )
+	ServerWeb = self.addHost( 'SrvWeb' )	
         Switch1 = self.addSwitch( 's1' )
         Switch2 = self.addSwitch( 's2' )
         # Add links
