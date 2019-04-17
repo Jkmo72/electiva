@@ -1,6 +1,7 @@
 from mininet.topo import Topo
 
 class MyTopo( Topo ):
+
     "Simple topology example."
   def __init__( self ):
         "Create custom topo."
@@ -22,7 +23,7 @@ class MyTopo( Topo ):
         self.addLink( Host2, Switch1 )
         self.addLink( Host3, Switch1 )
         self.addLink( Switch1, Switch2 )
-	 self.addLink( Switch2, Host4 )
+        self.addLink( Switch2, Host4 )
         self.addLink( Switch2, SrvWeb )
 
 
