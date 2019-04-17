@@ -4,7 +4,7 @@ class MyTopo( Topo ):
   def __init__( self ):
         "Create custom topo."
         # Initialize topology
-        Topo.__init__( self )
+        Topo.__init__( self ):
         # Add hosts and switches
         Host1 = self.addHost( 'h1' )
         Host2 = self.addHost( 'h2' )
