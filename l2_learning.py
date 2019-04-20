@@ -80,14 +80,6 @@ class LearningSwitch (object):
 
 # VER PAYLOAD
 
- print 'DPID: ', self.connection.dpid
-	print 'IN PORT: ', packet_in.in_port
-    	print packet.dst
-     	print packet.payload.protosrc
-     	print packet.payload.protodst
-    	print packet.payload.hwdst
-     	print packet.payload.hwsrc
-
     # Our table
     self.macToPort = {}
 
