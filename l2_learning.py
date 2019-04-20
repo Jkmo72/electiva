@@ -81,7 +81,7 @@ class LearningSwitch (object):
     self.connection = connection
     self.transparent = transparent
 
-# VER PAYLOAD
+
 
     # Our table
     self.macToPort = {}
@@ -89,6 +89,7 @@ class LearningSwitch (object):
 # Our firewall table
     self.firewall = {}
 
+# bloqueo MAC	
     # Add a Couple of Rules
     #self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
     #self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:04'))	
@@ -108,7 +109,7 @@ class LearningSwitch (object):
     """
     Handle packet in messages from the switch to implement above algorithm.
     """
-
+# VER PAYLOAD
     packet = event.parsed
     if packet.type == packet.IP_TYPE:
 	ip_packet = packet.payload
