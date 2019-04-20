@@ -78,6 +78,16 @@ class LearningSwitch (object):
     self.connection = connection
     self.transparent = transparent
 
+# VER PAYLOAD
+
+ print 'DPID: ', self.connection.dpid
+	print 'IN PORT: ', packet_in.in_port
+    	print packet.dst
+     	print packet.payload.protosrc
+     	print packet.payload.protodst
+    	print packet.payload.hwdst
+     	print packet.payload.hwsrc
+
     # Our table
     self.macToPort = {}
 
@@ -85,12 +95,9 @@ class LearningSwitch (object):
     self.firewall = {}
 
     # Add a Couple of Rules
-    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:01'))
     self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
-    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:03'))	
-    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:04'))
-    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:05'))
-    self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:05'))	
+    self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:04'))	
+
     # We want to hear PacketIn messages, so we listen
     # to the connection
     connection.addListeners(self)
