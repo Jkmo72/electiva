@@ -110,7 +110,7 @@ class LearningSwitch (object):
     """
 
     packet = event.parsed
-    if packet.type == packet.ICMP:
+    if packet.type == packet.ICMP_TYPE:
 	ip_packet = packet.payload
 	#ip_origen = ip_packet.srcip
 	print "El Payload es: ", ip_packet
