@@ -90,8 +90,8 @@ class LearningSwitch (object):
     self.firewall = {}
 
     # Add a Couple of Rules
-    self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
-    self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:04'))	
+    #self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
+    #self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:04'))	
 
     # We want to hear PacketIn messages, so we listen
     # to the connection
@@ -113,7 +113,7 @@ class LearningSwitch (object):
     if packet.type == packet.IP_TYPE:
 	ip_packet = packet.payload
 	ip_origen = ip_packet.srcip
-	print "La IP de origen es: ", ip_origen
+	print "La IP de origen es: ", ip_packet
 	print "La MAC de origen es:  ", packet.src 
 
 
