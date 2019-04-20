@@ -110,11 +110,10 @@ class LearningSwitch (object):
     """
 
     packet = event.parsed
-    if packet.type == packet.ICMP_TYPE:
+    if packet.type == packet.IP_TYPE:
 	ip_packet = packet.payload
-	#ip_origen = ip_packet.srcip
-	print "El Payload es: ", ip_packet
-	#print "La MAC de origen es:  ", packet.src 
+	print "El Payload del paquete es: ", ip_packet
+	
 
 
     def flood (message = None):
