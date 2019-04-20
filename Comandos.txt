@@ -1,0 +1,2 @@
+sudo mn --custom Topologia.py --topo mytopo --controller=remote,ip=127.0.0.1,port=6633
+ ./pox.py l2_learning
