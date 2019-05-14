@@ -113,7 +113,11 @@ class LearningSwitch (object):
     packet = event.parsed
     if packet.type == packet.IP_TYPE:
 	ip_packet = packet.payload
+	tcp_packet = ip_packet.payload
+	upper = tcp_packet.payload
 	print "El Payload del paquete es: ", ip_packet
+	print "El Payload del paquete es: ", tcp_packet
+	print "El Payload del paquete es: ", upper
 	
 
 
