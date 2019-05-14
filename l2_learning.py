@@ -115,10 +115,13 @@ class LearningSwitch (object):
 	ip_packet = packet.payload
 	tcp_packet = ip_packet.payload
 	upper = tcp_packet.payload
-	print "El Payload del paquete es: ", ip_packet
-	print "El Payload del paquete es: ", tcp_packet
-	print "El Payload del paquete es: ", upper
+	upper2 = upper.payload
 	
+	print "El Payload del paquete es: ", upper2
+
+#Firewall
+
+
 
 
     def flood (message = None):
