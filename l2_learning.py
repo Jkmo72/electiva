@@ -89,10 +89,10 @@ class LearningSwitch (object):
 # Our firewall table
     self.firewall = {}
 
-# bloqueo MAC	
-    # Add a Couple of Rules
-    #self.AddRule('00-00-00-00-00-01',EthAddr('00:00:00:00:00:02'))
-    #self.AddRule('00-00-00-00-00-02',EthAddr('00:00:00:00:00:04'))	
+#bloqueo IP	
+     Add a Couple of Rules
+    self.AddRule('10.0.0.1',EthAddr('10.0.0.1'))
+    self.AddRule('10.0.0.1',EthAddr('10.0.0.2'))	
 
     # We want to hear PacketIn messages, so we listen
     # to the connection
