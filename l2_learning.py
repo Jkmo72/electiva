@@ -99,7 +99,7 @@ class LearningSwitch (object):
     self.firewall = {}
 
 #bloqueo IP	
-     Add a Couple of Rules
+   #Add a Couple of Rules
     #self.AddRule('10.0.0.1',EthAddr('10.0.0.1'))
    # self.AddRule('10.0.0.1',EthAddr('10.0.0.2'))	
 
