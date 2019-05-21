@@ -9,7 +9,7 @@ import os
 import csv
 
 log = core.getLogger()
-policyFile = "/pox/pox/misc/firewallpolicies.csv"
+policyFile = "/pox/politicas.csv"
 
 class Firewall (EventMixin):
 
