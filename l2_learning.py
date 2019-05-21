@@ -121,9 +121,11 @@ class LearningSwitch (object):
     # VER PAYLOAD
     packet = event.parsed
     tcp = packet.find('tcp')
+    bloquear = 0
     if tcp is not None and tcp.parsed:
 		print "Paquete"
 		print tcp.payload.decode("utf-8")
+		# si find "no_pasar" bloquear = 1
     #if packet.type == packet.IP_TYPE:
     #ip_packet = packet.payload
     #tcp_packet = ip_packet.payload
@@ -131,7 +133,7 @@ class LearningSwitch (object):
 		
     #print "El Payload del paquete es: ", tcp_packet
 
-#Firewall
+    #Firewall
 
 
     def flood (message = None):
@@ -205,8 +207,9 @@ class LearningSwitch (object):
         msg.match = of.ofp_match.from_packet(packet, event.port)
         msg.idle_timeout = 10
         msg.hard_timeout = 30
-        msg.actions.append(of.ofp_action_output(port = port))
-	msg.actions.append(of.ofp_action_output(port = of.OFPP_CONTROLLER))
+	if bloquear == 0:        
+		msg.actions.append(of.ofp_action_output(port = port))
+		msg.actions.append(of.ofp_action_output(port = of.OFPP_CONTROLLER))
         msg.data = event.ofp # 6a
         self.connection.send(msg)
 	#print "Ruta enviada al SW"
