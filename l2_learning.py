@@ -148,7 +148,7 @@ class Firewall (EventMixin):
 	match = of.ofp_match(dl_type = 0x800,
 			     nw_proto = pkt.ipv4.ICMP_PROTOCOL)
         match.nw_src = IPAddr(src)
-        match.nw_dst = Http(dst)
+        match.nw_dst = IPAddr(dst)
         msg.match = match
         msg.idle_timeout = duration[0]
         msg.hard_timeout = duration[1]
