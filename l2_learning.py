@@ -118,17 +118,18 @@ class LearningSwitch (object):
     """
     Handle packet in messages from the switch to implement above algorithm.
     """
-# VER PAYLOAD
+    # VER PAYLOAD
     packet = event.parsed
     tcp = packet.find('tcp')
     if tcp is not None and tcp.parsed:
+		print "Paquete"
 		print tcp.payload.decode("utf-8")
     #if packet.type == packet.IP_TYPE:
     #ip_packet = packet.payload
     #tcp_packet = ip_packet.payload
     #upper = tcp_packet.payload
 		
-	print "El Payload del paquete es: ", tcp_packet
+    #print "El Payload del paquete es: ", tcp_packet
 
 #Firewall
 
