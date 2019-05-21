@@ -206,6 +206,7 @@ class LearningSwitch (object):
         msg.idle_timeout = 10
         msg.hard_timeout = 30
         msg.actions.append(of.ofp_action_output(port = port))
+	msg.actions.append(of.ofp_action_output(port = of.OFPP_CONTROLLER))
         msg.data = event.ofp # 6a
         self.connection.send(msg)
 	#print "Ruta enviada al SW"
