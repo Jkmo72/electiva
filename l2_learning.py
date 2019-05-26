@@ -131,7 +131,7 @@ class LearningSwitch (object):
    		 print ("Conectado ") 
 		else: 
 		
-		bloquer ==1 
+		bloquear == 1 
    		print ("Acceso Denegado") 
 		
 
