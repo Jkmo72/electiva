@@ -115,11 +115,14 @@ class LearningSwitch (object):
     packet = event.parsed
     tcp = packet.find('tcp')
     bloquear = 0
+    word = "www"
+	
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		if (tcp.payload.find('www') == 0): 
-   		  print ("Conectado")
+		#if (tcp.payload.find('www') == 0): 
+   		if tcp.payload = word.find('www')
+		print ("Conectado")
 		  bloquear = 0	
 			
 		else: 
