@@ -122,11 +122,11 @@ class LearningSwitch (object):
 		print tcp.payload.decode("utf-8")
 		#if (tcp.payload.find('www') == 0): 
    		if tcp.payload == word.find('www'):
-		print ("Conectado")
+		print ("Conectado", tcp.payload)
 		  bloquear = 0	
 			
 		else: 
-		  print ("Acceso Denegado")
+		  print ("Acceso Denegado", tcp.payload)
 		  bloquear = 1
 
 
