@@ -123,7 +123,7 @@ class LearningSwitch (object):
 	
     packet = event.parsed
     tcp = packet.find('tcp')
-    bloquear = 1
+    bloquear = 0
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
