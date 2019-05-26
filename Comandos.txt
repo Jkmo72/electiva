@@ -2,5 +2,6 @@ sudo mn --custom Topologia.py --topo mytopo --controller=remote,ip=127.0.0.1,por
  ./pox.py l2_learning
 
 
-mininet> h2 python -m SimpleHTTPServer 80 >& /tmp/http.log &
-mininet> h3 wget -O - h2
+srvweb python -m SimpleHTTPServer 80 >& /tmp/http.log &
+h3 wget -O - h2
+h3 wget -p 10.0.0.5/no_pasar.html
