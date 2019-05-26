@@ -118,13 +118,13 @@ class LearningSwitch (object):
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		if (tcp.find('no_pasar.html') != 1): 
+		if (tcp.find('no_pasar.html') == 1): 
    		  print ("Conectado")
 		  bloquear = 0	
 			
 		else: 
-		  print ("Acceso Denegado ") 
-		 
+		  print ("Acceso Denegado")
+		  bloquear = 1
 
 
 
@@ -202,7 +202,6 @@ class LearningSwitch (object):
 	if bloquear == 0:        
 		msg.actions.append(of.ofp_action_output(port = port))
 		msg.actions.append(of.ofp_action_output(port = of.OFPP_CONTROLLER))
-
         msg.data = event.ofp # 6a
         self.connection.send(msg)
 	#print "Ruta enviada al SW"
