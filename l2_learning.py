@@ -120,7 +120,7 @@ class LearningSwitch (object):
 		print tcp.payload.decode("utf-8")
 		if (tcp.find('no_pasar.html') != -1): 
    		 #print ("Acceso Denegado ") 
-		  bloquear = 1	
+		  bloquear = 0	
 			
 		else: 
 		 
