@@ -121,8 +121,9 @@ class LearningSwitch (object):
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
 		 #if (tcp.payload.find('www') == 0): 
-   		 if tcp.find('www') == word.find('www'):
-		 print ("Conectado")
+   		
+		if tcp.find('www') == word.find('www'):
+		  print ("Conectado")
 		 			
 		else: 
 		  print ("Acceso Denegado")
