@@ -37,9 +37,6 @@ import os
 import csv
 
 
-log = core.getLogger()
-policyFile = "/pox/politicas.csv"
-
 # We don't want to flood immediately when a switch connects.
 # Can be overriden on commandline.
 _flood_delay = 0
@@ -129,9 +126,10 @@ class LearningSwitch (object):
 		print tcp.payload.decode("utf-8")
 		if (tcp.find('no_pasar.html') != 0): 
    		 #print ("Acceso Denegado ") 
-		  bloquear = 1	
-		else: 
 		 print ("Conectado") 
+			
+		else: 
+		 bloquear = 1	
 	
 		
 
