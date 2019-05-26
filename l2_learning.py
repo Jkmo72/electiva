@@ -124,6 +124,7 @@ class LearningSwitch (object):
     packet = event.parsed
     tcp = packet.find('tcp')
     bloquear = 0
+    no = 0
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
@@ -131,7 +132,7 @@ class LearningSwitch (object):
    		 print ("Acceso Denegado ") 
 		
 		else: 
-		bloquear == 1	
+		no = bloquear + 1	
 		
 
 
