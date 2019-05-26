@@ -118,26 +118,22 @@ class LearningSwitch (object):
     """
     Handle packet in messages from the switch to implement above algorithm.
     """
-    # VER PAYLOAD
+
+    #Firewall
+	
     packet = event.parsed
     tcp = packet.find('tcp')
     bloquear = 0
     if tcp is not None and tcp.parsed:
-		print "Paquete"
+		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		if (tcp.find('no_pasar') != 1): 
-   		 print ("Acceso denegado ") 
+		if (tcp.find('no_pasar') == 1): 
+   		 print ("Acceso Denegado ") 
 		else: 
    		 print ("Conectado") 
-		# si find "no_pasar" bloquear = 1
-    #if packet.type == packet.IP_TYPE:
-    #ip_packet = packet.payload
-    #tcp_packet = ip_packet.payload
-    #upper = tcp_packet.payload
 		
-    #print "El Payload del paquete es: ", tcp_packet
 
-    #Firewall
+
 
 
     def flood (message = None):
