@@ -123,11 +123,11 @@ class LearningSwitch (object):
 	
     packet = event.parsed
     tcp = packet.find('tcp')
-    bloquear = 0
+    bloquear = 1
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		if (tcp.find('no_pasar.html') != 1): 
+		if (tcp.find('no_pasar.html') == bloquear): 
    		 print ("Acceso Denegado ") 
 		else: 
    		 print ("Conectado") 
@@ -207,7 +207,7 @@ class LearningSwitch (object):
         msg.match = of.ofp_match.from_packet(packet, event.port)
         msg.idle_timeout = 10
         msg.hard_timeout = 30
-	if bloquear == 1:        
+	if bloquear == 0:        
 		msg.actions.append(of.ofp_action_output(port = port))
 		msg.actions.append(of.ofp_action_output(port = of.OFPP_CONTROLLER))
         msg.data = event.ofp # 6a
