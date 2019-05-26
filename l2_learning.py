@@ -126,12 +126,11 @@ class LearningSwitch (object):
 		print tcp.payload.decode("utf-8")
 		if (tcp.find('no_pasar.html') != -1): 
    		 #print ("Acceso Denegado ") 
-		 print ("Conectado") 
+		  bloquear = 1	
 			
 		else: 
-		 bloquear = 1	
-	
-		
+		 
+		 print ("Conectado")
 
 
     def flood (message = None):
