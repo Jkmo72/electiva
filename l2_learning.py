@@ -110,7 +110,7 @@ class LearningSwitch (object):
     Handle packet in messages from the switch to implement above algorithm.
     """
 
-    #Firewall
+    #------------------------------FIREWALL---------------------------------|
 	
     packet = event.parsed
     tcp = packet.find('tcp')
@@ -121,15 +121,21 @@ class LearningSwitch (object):
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
 		#if (tcp.payload.find('www') == 0): 
-   		if tcp.find('www') == word.find('www'):
-		  print ("Conectado")
-		  bloquear = 0	
+   		#if tcp.find('www') == word.find('www'):
+		# print ("Conectado")
+		 			
+		#else: 
+		 # print ("Acceso Denegado")
+		  #bloquear = 1
 			
-		else: 
+		if tcp.find('www') == word.find('www'):
 		  print ("Acceso Denegado")
-		  bloquear = 1
+		 			
+		else: 
+		  print ("Conectado")
+		  	
 
-
+    #------------------------------------------------------------------------|
 
     def flood (message = None):
       """ Floods the packet """
