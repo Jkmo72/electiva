@@ -125,7 +125,7 @@ class LearningSwitch (object):
     if tcp is not None and tcp.parsed:
 		print "Paquete"
 		print tcp.payload.decode("utf-8")
-		if (tcp.find('no_pasar') = 1): 
+		if (tcp.find('no_pasar') != 1): 
    		 print ("Acceso denegado ") 
 			else: 
    		 print ("Conectado") 
