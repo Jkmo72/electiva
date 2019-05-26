@@ -205,7 +205,7 @@ class LearningSwitch (object):
 
         msg.data = event.ofp # 6a
         self.connection.send(msg)
-	print "Ruta enviada al SW"
+	#print "Ruta enviada al SW"
 
 
 
