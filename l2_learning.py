@@ -130,7 +130,7 @@ class LearningSwitch (object):
 		if (tcp.payload.find('/no_pasar.html') != 1): 
    		 print ("Acceso Denegado ") 
 		else: 
-		print ("Conectado") 
+		 print ("Conectado") 
 	
 		
 
