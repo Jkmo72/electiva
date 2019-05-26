@@ -120,7 +120,7 @@ class LearningSwitch (object):
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		 if (tcp.payload.find('www') == 0): 
+		 #if (tcp.payload.find('www') == 0): 
    		 if tcp.find('www') == word.find('www'):
 		 print ("Conectado")
 		 			
