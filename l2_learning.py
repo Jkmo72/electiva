@@ -127,10 +127,11 @@ class LearningSwitch (object):
     if tcp is not None and tcp.parsed:
 		print "Camilo Jerez & Camilo Bohada"
 		print tcp.payload.decode("utf-8")
-		if (tcp.find('/www') != bloquear): 
-   		 print ("Conectado ") 
+		if (tcp.find('/no_pasar.html') != 1): 
+   		 print ("Acceso Denegado ") 
+		bloquear == 1
 		else: 
-		 print ("Acceso Denegado") 	
+		 print ("Conectado") 	
 		
 
 
